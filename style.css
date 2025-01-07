@@ -10,7 +10,7 @@
 body {
     height: 100vh;
     background: #212529;
-    overflow: hidden; /* Prevent scrollbar during animation */
+    overflow: auto;
 }
 
 .navbar {
@@ -197,12 +197,21 @@ body {
     width: 100%;
     margin-top: 100px;
     padding: 30px 50px;
-    background-color: #33383d;
+    background: #33383d;
+    opacity: 0; /* Set initial opacity to 0 */
+    transform: translateY(20px); /* Start slightly lower */
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* Add transition for opacity and transform */
+}
+
+.about.visible {
+    opacity: 1; /* Set opacity to 1 when the class is added */
+    transform: translateY(0); /* Move to original position */
 }
 
 .about h2 {
     margin: 0 0 20px;
     color: #ffb742;
+    text-align: left;
 }
 
 .about .content {
