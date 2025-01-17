@@ -5,8 +5,8 @@ window.addEventListener("load", () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                aboutSection.classList.add('visible'); // Add the visible class
-                observer.unobserve(aboutSection); // Stop observing after it becomes visible
+                aboutSection.classList.add('visible');
+                observer.unobserve(aboutSection);
             }
         });
     });

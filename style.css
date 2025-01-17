@@ -23,21 +23,21 @@ body {
     animation: slideIn 1s ease-in-out forwards;
 }
 
-.navbar .logo {
+.navbar .logo a {
     display: flex;
     align-items: center;
     gap: 10px;
+    text-decoration: none;
 }
 
-.navbar .logo img {
+.navbar .logo a img {
     height: 40px;
     width: 40px;
 }
 
-.navbar .logo h2 {
+.navbar .logo a h2 {
     color: #ffb742;
     font-weight: 600;
-    cursor: pointer;
 }
 
 .navbar ul {
@@ -103,7 +103,7 @@ body {
 }
 
 .main {
-    height: 600px;
+    height: 450px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -118,6 +118,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .main .image .blur {
@@ -129,19 +130,19 @@ body {
 }
 
 .main .image img:hover ~ .blur {
-    box-shadow: 0 0 1500px 80px #1d4ed8;
+    box-shadow: 0 0 1500px 100px #1d4ed8;
 }
 
 .main .image img {
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
     transition: 0.5s ease;
 }
 
 .main .image img:hover {
-    width: 450px;
-    height: 450px;
+    width: 400px;
+    height: 400px;
 }
 
 .main .container .info {
@@ -232,6 +233,7 @@ body {
     margin-top: 100px;
     padding: 30px 50px;
     background: #33383d;
+    justify-items: center;
     opacity: 0; /* Set initial opacity to 0 */
     transform: translateY(20px); /* Start slightly lower */
     transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* Add transition for opacity and transform */
@@ -242,13 +244,17 @@ body {
     transform: translateY(0); /* Move to original position */
 }
 
+.about .content {
+    width: 70vw;
+}
+
 .about h2 {
     margin: 0 0 20px;
     color: #ffb742;
     text-align: left;
 }
 
-.about .content {
+.about .info {
     display: flex;
     gap: 30px;
 }
