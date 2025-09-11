@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
+:root {
+    --primary-yellow: #ff9100;
+    --primary-blue: #3260df;
+    --dark-blue: #090083;
+    --main-black: #212529;
+    --main-white: #f7f7f7;
+    --shadow: #ccc;
+    --alt-yellow: #d89934;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,15 +19,20 @@
 
 body {
     height: 100vh;
-    background: #212529;
+    background: var(--main-white);
     overflow: auto;
 }
 
 .navbar {
     display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--main-white);
+    box-shadow: 0 2px 10px var(--shadow);
     align-items: center;
     justify-content: space-between;
-    height: 80px;
+    height: 10%;
     padding: 0 50px;
     opacity: 0;
     animation: slideIn 1s ease-in-out forwards;
@@ -36,7 +51,7 @@ body {
 }
 
 .navbar .logo a h2 {
-    color: #ffb742;
+    color: var(--primary-yellow);
     font-weight: 600;
 }
 
@@ -51,7 +66,7 @@ body {
 .navbar ul li a {
     position: relative;
     text-decoration: none;
-    color: #fff;
+    color: var(--main-black);
     font-size: 16px;
     padding: 10px 20px;
     border-bottom: 2px solid transparent;
@@ -89,8 +104,8 @@ body {
 }
 
 .navbar ul li:hover a {
-    color: #ffb742;
-    border-color: #ffb742;
+    color: var(--primary-yellow);
+    border-color: var(--primary-yellow);
 }
 
 .navbar ul li:last-child a {
@@ -98,12 +113,12 @@ body {
 }
 
 .navbar .active {
-    color: #ffb742;
-    border-color: #ffb742;
+    color: var(--primary-yellow);
+    border-color: var(--primary-yellow);
 }
 
 .main {
-    height: 450px;
+    height: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -118,19 +133,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
 }
 
 .main .image .blur {
+    opacity: 0;
     position: absolute;
     align-items: center;
-    box-shadow: 0 0 1000px 60px #1d4ed8;
+    box-shadow: 0 0 300px 60px var(--dark-blue);
     z-index: -100;
-    transition: box-shadow 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 .main .image img:hover ~ .blur {
-    box-shadow: 0 0 1500px 100px #1d4ed8;
+    opacity: 1;
+    box-shadow: 0 0 500px 90px var(--dark-blue);
 }
 
 .main .image img {
@@ -140,27 +156,30 @@ body {
     transition: 0.5s ease;
 }
 
+.main .container {
+    display: flex;
+    flex-direction: column;
+}
+
 .main .image img:hover {
     width: 400px;
     height: 400px;
 }
 
 .main .container .info {
-    margin-top: -30px;
     display: flex;
     flex-direction: column;
 }
 
 .main .container h4 {
     font-size: 32px;
-    color: #fff;
+    color: var(--main-black);
     font-weight: 600;
-    margin-top: 50px;
 }
 
 .main .container h4 a {
     position: relative;
-    color: #ffb742;
+    color: var(--primary-yellow);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -172,7 +191,7 @@ body {
     bottom: -2px;
     width: 0;
     height: 2px;
-    background-color: #ffb742;
+    background-color: var(--primary-yellow);
     transition: width 0.3s ease;
 }
 
@@ -190,82 +209,40 @@ body {
 .main .container p.title {
     font-size: 44px;
     font-weight: 600;
-    color: #fff;
-    margin-top: -8px;
+    color: var(--main-black);
 }
 
 .main .container p.subtitle {
     font-size: 16px;
-    color: #ccc;
-    margin-top: 15px;
-    background-color: #2a4ca8;
+    color: var(--main-white);
+    background-color: var(--primary-blue);
     text-align: center;
     border-radius: 10px;
     width: 370px;
     height: 35px;
+    margin: 15px 0 50px 0;
     align-content: center;
 }
 
 .main .container .hire-btn {
-    background-color: #ffb742;
+    background-color: var(--primary-yellow);
+    width: 120px;
     font-size: 16px;
     font-weight: 600;
-    color: #212529;
+    color: var(--main-white);
     padding: 5px 25px;
-    margin-top: 50px;
     border-radius: 20px;
     cursor: pointer;
     border: 2px solid transparent;
-    border-color: #ffb742;
+    border-color: var(--primary-yellow);
     transition: all 0.2s ease;
 }
 
 .main .container .hire-btn:hover {
-    background-color: #212529;
-    color: #d89934;
-    border-color: #d89934;
+    background-color: var(--main-white);
+    color: var(--primary-yellow);
+    border-color: var(--primary-yellow);
     scale: 1.05;
-}
-
-.about {
-    height: 450px;
-    width: 100%;
-    margin-top: 100px;
-    padding: 30px 50px;
-    background: #33383d;
-    justify-items: center;
-    opacity: 0; /* Set initial opacity to 0 */
-    transform: translateY(20px); /* Start slightly lower */
-    transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* Add transition for opacity and transform */
-}
-
-.about.visible {
-    opacity: 1; /* Set opacity to 1 when the class is added */
-    transform: translateY(0); /* Move to original position */
-}
-
-.about .content {
-    width: 70vw;
-}
-
-.about h2 {
-    margin: 0 0 20px;
-    color: #ffb742;
-    text-align: left;
-}
-
-.about .info {
-    display: flex;
-    gap: 30px;
-}
-
-.about p {
-    color: #ccc;
-    font-size: 16px;
-}
-
-footer {
-    height: 300px;
 }
 
 @keyframes fadeIn {
