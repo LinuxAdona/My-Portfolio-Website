@@ -312,6 +312,52 @@ body {
     background: var(--primary-yellow);
 }
 
+/* Experience Grid */
+.experience-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.experience-card {
+    display: flex;
+    align-items: start;
+    gap: 30px;
+    background: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.experience-card i {
+    font-size: 2.5rem;
+    color: var(--primary-yellow);
+    margin-top: 10px;
+}
+
+.experience-details {
+    flex: 1;
+}
+
+.company {
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+.duration {
+    color: #666;
+    margin: 8px 0;
+}
+
+.responsibilities {
+    padding-left: 20px;
+    color: #444;
+}
+
+.responsibilities li {
+    margin-bottom: 8px;
+}
+
 /* Skills Grid */
 .skills-grid {
     display: grid;
@@ -338,6 +384,81 @@ body {
     font-size: 3rem;
     color: var(--primary-blue);
     margin-bottom: 20px;
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-blue);
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: var(--primary-yellow);
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.timeline-date {
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 10px;
 }
 
 /* Footer Styles */
