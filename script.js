@@ -24,7 +24,6 @@ window.addEventListener("load", () => {
             });
             this.classList.add('active');
             
-            target.classList.remove('visible');
             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             setTimeout(() => target.classList.add('visible'), 500);
         });
