@@ -25,14 +25,16 @@ body {
 
 .navbar {
     display: flex;
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 100;
+    left: 0;
+    right: 0;
+    z-index: 1000;
     background: var(--main-white);
     box-shadow: 0 2px 10px var(--shadow);
     align-items: center;
     justify-content: space-between;
-    height: 10%;
+    height: 70px;
     padding: 0 50px;
     opacity: 0;
     animation: slideIn 1s ease-in-out forwards;
@@ -126,6 +128,7 @@ body {
     opacity: 0;
     animation: fadeIn 1.5s ease-out forwards;
     animation-delay: 0.8s;
+    padding-top: 70px;
 }
 
 .main .image {
