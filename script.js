@@ -2,6 +2,14 @@ window.addEventListener("load", () => {
     document.body.style.overflow = "visible";
     const sections = document.querySelectorAll('.section');
     
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+    
     // Intersection Observer for initial animations
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {

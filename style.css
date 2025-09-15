@@ -35,9 +35,51 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 70px;
-    padding: 0 50px;
+    padding: 0 30px;
     opacity: 0;
     animation: slideIn 1s ease-in-out forwards;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--main-black);
+    cursor: pointer;
+    padding: 5px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 20px;
+        height: 60px;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: var(--main-white);
+        flex-direction: column;
+        transition: 0.3s ease;
+        padding: 20px 0;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .navbar ul li a {
+        padding: 15px 20px;
+        font-size: 1.1rem;
+    }
 }
 
 .navbar .logo a {
@@ -129,6 +171,46 @@ body {
     animation: fadeIn 1.5s ease-out forwards;
     animation-delay: 0.8s;
     padding-top: 70px;
+}
+
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        gap: 50px;
+        padding: 30px 20px;
+        padding-top: 90px;
+    }
+    
+    .main .image img {
+        width: 70vw;
+        height: 70vw;
+        min-width: 250px;
+        min-height: 250px;
+    }
+    
+    .main .container h4 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    
+    .main .container p.title {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .main .container p.subtitle {
+        width: 100%;
+        max-width: 400px;
+        margin: 15px auto 50px;
+    }
+    
+    .section {
+        padding: 60px 20px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
 }
 
 .main .image {
@@ -480,6 +562,36 @@ body {
     width: 2px;
     height: 100%;
     background: var(--primary-yellow);
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 20px;
+    }
+    
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        left: 0;
+        text-align: left;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-group {
+        flex-direction: column;
+    }
+    
+    .form-group input {
+        margin-bottom: 15px;
+    }
 }
 
 .timeline-item {
