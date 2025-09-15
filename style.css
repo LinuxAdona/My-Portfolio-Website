@@ -295,7 +295,7 @@ body {
 }
 
 .main .container h4 {
-    font-size: 64px;
+    font-size: clamp(2.5rem, 5vw, 4rem);
     color: var(--main-black);
     font-weight: 600;
 }
@@ -330,20 +330,20 @@ body {
 }
 
 .main .container p.title {
-    font-size: 56px;
+    font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 600;
     color: var(--main-black);
 }
 
 .main .container p.subtitle {
-    font-size: 18px;
+    font-size: clamp(1rem, 2vw, 1.125rem);
     color: var(--main-white);
     background-color: var(--primary-blue);
     text-align: center;
     border-radius: 10px;
-    width: 400px;
-    height: 35px;
-    margin: 15px 0 50px 0;
+    width: min(400px, 90%);
+    height: clamp(30px, 3vw, 35px);
+    margin: 15px 0 clamp(2rem, 5vw, 3.125rem) 0;
     align-content: center;
 }
 
