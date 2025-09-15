@@ -187,14 +187,22 @@ body {
         min-width: 250px;
         min-height: 250px;
     }
+
+    .main .container {
+        align-items: center;
+    }
+
+    .main .container .info {
+        align-items: center;
+    }
     
     .main .container h4 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         text-align: center;
     }
     
     .main .container p.title {
-        font-size: 2rem;
+        font-size: 1rem;
         text-align: center;
     }
     
@@ -202,6 +210,7 @@ body {
         width: 100%;
         max-width: 400px;
         margin: 15px auto 50px;
+        text-align: center;
     }
     
     .section {
@@ -209,7 +218,7 @@ body {
     }
     
     .section-title {
-        font-size: 2rem;
+        font-size: 1rem;
     }
 }
 
@@ -387,18 +396,6 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-@keyframes wave {
-    0% {
-        transform: rotate(0deg);
-    }
-    50% {
-        transform: rotate(20deg);
-    }
-    100% {
-        transform: rotate(0deg);
     }
 }
 
