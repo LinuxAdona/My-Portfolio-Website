@@ -5,40 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GEMS</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body class="bg-light d-flex align-items-center" style="height: 100vh;">
     <!--Login Page-->
-    <!--I need a video to play behind the container-->
     <div class="position-relative d-flex align-items-center justify-content-center w-100 h-100" style="min-height: 100vh;">
         <video autoplay muted loop class="position-absolute top-0 start-0 w-100 h-100" style="object-fit: cover; z-index: -1;">
-            <source src="assets/bg-video.mp4" type="video/mp4">
+            <source src="assets/abstract-water-bg.mp4" type="video/mp4">
             <img src="assets/login-fallback.jpg" alt="Background" class="w-100 h-100" style="object-fit: cover;">
         </video>
         <div class="container my-5">
             <div class="row justify-content-center">
-                <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4 p-4 p-md-5 rounded shadow" style="background: rgba(255,255,255,0.3); backdrop-filter: blur(12px); border: 2px solid rgba(255,255,255,0.5);">
+                <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 p-4 p-md-5 rounded shadow" style="background: rgba(255,255,255,0.8); backdrop-filter: blur(12px); border: 2px solid rgba(255, 255, 255, 1);">
                     <div class="container text-center mb-4">
                         <img src="assets/GEMS-LOGO-ONLY.png" alt="GEMS Logo" class="img-fluid mb-3" style="max-width: 120px;">
                         <div class="fs-5 fs-md-4 d-flex align-items-center justify-content-center">
                             <h4>Sign in to</h4>
-                            <img src="assets/GEMS-TEXT-LOGO-ONLY.png" alt="GEMS Text Logo" class="mb-2 img-fluid" style="max-width: 100px;">
+                            <img src="assets/GEMS-TEXT-LOGO-ONLY.png" alt="GEMS Text Logo" class="mb-2 img-fluid" style="max-width: 90px;">
                         </div>
                     </div>
                     <form>
                         <div class="mb-3">
-                            <label for="username" class="form-label">Username</label>
+                            <label for="username" class="form-label"><i class="fa-solid fa-user mx-2"></i>Username</label>
                             <input type="text" class="form-control" id="username" placeholder="Enter your username">
                         </div>
                         <div class="mb-3">
-                            <label for="password" class="form-label">Password</label>
+                            <label for="password" class="form-label"><i class="fa-solid fa-lock mx-2"></i>Password</label>
                             <input type="password" class="form-control" id="password" placeholder="Enter your password">
                             <div class="text-end mt-2">
                                 <a href="#ForgotPass" class="link-primary" id="#ForgotPass">Forgot Password?</a>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100" id="btnSignIn">Sign in</button>
+                        <!--Add light blue border to the button-->
+                        <button type="submit" class="btn btn-primary w-100">Sign in</button>
                     </form>
                     <div class="text-center mt-3">
                         <div class="d-flex align-items-center">
