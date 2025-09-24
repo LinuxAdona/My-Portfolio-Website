@@ -1,0 +1,12 @@
+/*Change the color of the primary color of bootstrap and apply it to all links, buttons*/
+:root {
+    --bs-primary: #4acbe2;
+}
+
+a.link-primary {
+    text-decoration: none;
+}
+
+a.link-primary:hover {
+    text-decoration: underline;
+}
