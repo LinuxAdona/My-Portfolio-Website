@@ -1,1 +1,29 @@
-<meta http-equiv="refresh" content="0; url=login.html">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Add loading icon here-->
+    <link rel="icon" href="assets/Logos/LOGO-TAB.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Redirect</title>
+</head>
+<body>
+    <!--Add a loading screen animation here for the redirecting-->
+    <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <!--Add animation dots to Redirecting...-->
+        <div class="fw-bold fs-1">
+            <span class="dot1">.</span><span class="dot2">.</span><span class="dot3">.</span><span class="dot4">.</span>
+        </div>
+    </div>
+    <script>
+        // Redirect to login.html after a short delay
+        setTimeout(function() {
+            window.location.href = "login.html";
+        }, 2000); // 2000 milliseconds delay
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
