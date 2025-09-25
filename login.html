@@ -10,19 +10,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
-<body class="bg-light d-flex align-items-center" style="height: 100vh;">
-    <!--Login Page-->
-    <div class="position-relative d-flex align-items-center justify-content-center w-100 h-100" style="min-height: 100vh;">
+<body class="vh-100">
+    <div class="position-relative d-flex align-items-center justify-content-center w-100 h-100">
         <video autoplay muted loop class="position-absolute top-0 start-0 w-100 h-100" style="object-fit: cover; z-index: -1;">
             <source src="assets/Videos/abstract-water-bg.mp4" type="video/mp4">
             <img src="assets/login-fallback.jpg" alt="Background" class="w-100 h-100" style="object-fit: cover;">
         </video>
-        <div class="container my-5">
-            <div class="row justify-content-center">
-                <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 p-4 p-md-5 rounded shadow" 
-                style="background: rgba(255,255,255,0.8); backdrop-filter: blur(12px); border: 2px solid rgba(255, 255, 255, 1);">
+        <div class="container h-100 p-0">
+            <div class="row justify-content-center align-items-center h-100 m-0 p-3">
+                <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 p-4 p-sm-5 p-md-5 rounded shadow" style="background: rgba(255,255,255,0.8); backdrop-filter: blur(12px); border: 2px solid rgba(255, 255, 255, 1);">
                     <div class="container text-center mb-4">
-                        <img src="assets/Logos/GEMS-LOGO-ONLY.png" alt="GEMS Logo" class="img-fluid mb-1" style="max-width: 200px;">
+                        <img src="assets/Logos/GEMS-LOGO-ONLY.png" alt="GEMS Logo" class="img-fluid mb-1" style="max-width: 150px;">
                         <div class="fs-5 fs-md-4 d-flex align-items-center justify-content-center">
                             <h4>Sign in to</h4>
                             <img src="assets/Logos/GEMS-TEXT-LOGO-ONLY.png" alt="GEMS Text Logo" class="mb-2 img-fluid" style="max-width: 90px;">
@@ -30,8 +28,8 @@
                     </div>
                     <form>
                         <div class="mb-3">
-                            <label for="username" class="form-label"><i class="fa-solid fa-user mx-2"></i>Username</label>
-                            <input type="text" class="form-control" id="username" placeholder="Enter your username">
+                            <label for="login" class="form-label"><i class="fa-solid fa-user mx-2"></i>Username or Email</label>
+                            <input type="text" class="form-control" id="login" placeholder="Enter your username or email address">
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label"><i class="fa-solid fa-lock mx-2"></i>Password</label>
@@ -55,6 +53,17 @@
                 </div>
             </div>
         </div>
+        <style>
+        @media (max-width: 576px) {
+            .container.h-100 {
+                padding: 2rem 0.5rem;
+                min-height: 100vh;
+            }
+            .row.h-100 {
+                min-height: calc(100vh - 4rem);
+            }
+        }
+        </style>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
