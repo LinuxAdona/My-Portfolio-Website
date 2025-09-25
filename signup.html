@@ -10,11 +10,11 @@
 </head>
 <body class="bg-light d-flex align-items-center justify-content-center" style="height: 100vh;">
     <div class="row w-100" style="height: 100vh; margin: 0;">
-        <div class="col-6 p-0 position-relative d-flex justify-content-start p-5" style="height: 100vh;">
+        <div class="col-12 col-md-6 position-relative d-flex justify-content-center justify-content-md-start p-4 p-md-5" style="height: clamp(fit-content, 100vh, 100vh);">
             <video autoplay muted loop style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
                 <source src="./assets/Videos/water-bg-red.mp4" type="video/mp4">
             </video>
-            <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 p-4 rounded shadow"
+            <div class="col-12 col-md-6 p-4 p-md-5 rounded shadow"
                 style="background: rgba(255,255,255,0.6); 
                 backdrop-filter: blur(12px); 
                 border: 2px solid rgba(255, 255, 255, 0.8); height: fit-content; width: fit-content;">
@@ -83,13 +83,13 @@
                 </div>
             </div>
         </div>
-        <div class="col-6 p-0 shadow-lg" style="height: 100vh; margin: 0;">
-            <div class="bg-light d-flex flex-column justify-content-center align-items-center h-100 pt-3 pe-5">
-                <div class="text-end w-100">
-                    Already have an account?<a href="login.html" class="link-primary ms-3" id="CreateAccount">Sign in →</a>
+        <div class="col-12 col-md-6 p-0 shadow-lg" style="height: clamp(fit-content, 100vh, 100vh); margin: 0;">
+            <div class="bg-light d-flex flex-column justify-content-center align-items-center h-100">
+                <div class="text-center text-md-end w-100 pt-3 px-4">
+                    Already have an account? <a href="login.html" class="link-primary" id="CreateAccount">Sign in →</a>
                 </div>
-                <div class="d-flex flex-column justify-content-start align-items-center h-100 p-5" style="max-width: 550px; width: 100%;">
-                    <div class="fs-5 fs-md-4 my-4 d-flex align-items-center justify-content-start">
+                <div class="d-flex flex-column justify-content-start align-items-center h-100 p-4 p-md-5" style="max-width: 550px;">
+                    <div class="fs-5 fs-md-4 mb-4 d-flex align-items-center justify-content-start">
                         <h4>Sign up for</h4>
                         <img src="assets/Logos/GEMS-TEXT-LOGO-ONLY.png" alt="GEMS Text Logo" class="mb-2 ms-1 img-fluid" style="max-width: 90px;">
                     </div>
